@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
+const taskRouter = require("./Routes/task");
 
-app.get("/", (req, res) => {
-    res.send("<center><h1>Hello World Testing h1</h1></center>");
-});
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
+app.use("/", taskRouter);
 
 app.listen(3000, () => {
     console.log("Server running with port 3000");
