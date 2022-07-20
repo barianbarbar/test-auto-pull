@@ -16,4 +16,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: cd /workspace/barianbarbar/test-auto-pull && git pull origin main && npm install
+          script: cd /workspace/barianbarbar/test-auto-pull && git pull origin main && npm install && pm2 restart
