@@ -1,18 +1,18 @@
 name: Deploy Prod
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 jobs:
   build:
     name: Deployment auto
     runs-on: ubuntu-latest
     steps: 
+        uses: actions/checkout@v2
       - name: SSH Remote
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USER }}
+          username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           command: cd /workspace/barianbarbar/test-auto-pull && git pull origin main
