@@ -6,12 +6,12 @@ on:
 jobs:
   build:
     name: Deployment auto
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps: 
       - name: SSH Remote
         uses: fifsky/ssh-action@master
         with:
-          host: ${{ SSH_HOST }}
-          user: ${{ SSH_USER }}
-          key: ${{ SSH_KEY }}
+          host: ${{ secret.SSH_HOST }}
+          user: ${{ secret.SSH_USER }}
+          key: ${{ secret.SSH_KEY }}
           command: cd /workspace/barianbarbar/test-auto-pull && git pull origin main
