@@ -14,4 +14,4 @@ jobs:
           host: ${{ SSH_HOST }}
           user: ${{ SSH_USER }}
           key: ${{ SSH_KEY }}
-          command: cd /workspace/barianbarbar
+          command: cd /workspace/barianbarbar/test-auto-pull && git pull origin main
