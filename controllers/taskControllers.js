@@ -9,3 +9,7 @@ exports.pageAllListTask = (req, res) => {
 exports.pageEditTask = (req, res) => {
     res.render("index", { activePage: "edit" });
 }
+
+exports.addNewTask = (req, res) => {
+    res.send("Hello");
+};
