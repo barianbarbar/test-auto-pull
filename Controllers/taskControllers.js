@@ -3,7 +3,7 @@ exports.pageAddNewTask = (req, res) => {
 };
 
 exports.pageAllListTask = (req, res) => {
-    res.render("index", { activePage: "list-all" });
+    res.render("index", { activePage: "list" });
 };
 
 exports.pageEditTask = (req, res) => {
