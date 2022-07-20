@@ -7,5 +7,5 @@ exports.pageAllListTask = (req, res) => {
 };
 
 exports.pageEditTask = (req, res) => {
-    res.render("index", { activePage: "edit" })
+    res.render("index", { activePage: "edit" });
 }
