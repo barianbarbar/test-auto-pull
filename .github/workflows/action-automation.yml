@@ -14,6 +14,6 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: cd /workspace/barianbarbar/test-auto-pull && git fetch && git reset --hard HEAD && git merge origin/main && npm install && pm2 restart app
