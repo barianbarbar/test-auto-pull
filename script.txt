@@ -1,0 +1,1 @@
+          script: cd /workspace/barianbarbar/test-auto-pull && git fetch && git reset --hard HEAD && git merge origin/main && npm install
