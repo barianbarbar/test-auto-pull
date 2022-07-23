@@ -12,8 +12,8 @@ jobs:
       - name: SSH Remote
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
+          host: ${{ secrets.PROXMOX_HOST }}
+          username: ${{ secrets.PROXMOX_USER }}
+          key: ${{ secrets.PROXMOX_KEY }}
+          port: ${{ secrets.PROXMOX_PORT }}
           script: ls -al
