@@ -9,13 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
 
-      - name: SSH Remote
+      - name: SSH Remote GOORM
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.GOORM_HOST }}
           username: ${{ secrets.GOORM_USER }}
           key: ${{ secrets.GOORM_KEY }}
           port: ${{ secrets.GOORM_PORT }}
+          script: |
+            ls -l
+            ls -al
+            cd /workspace
+
+      - name: SSH Remote PROXMOX
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PROXMOX_HOST }}
+          username: ${{ secrets.PROXMOX_USER }}
+          key: ${{ secrets.PROXMOX_KEY }}
+          port: ${{ secrets.PROXMOX_PORT }}
           script: |
             ls -l
             ls -al
