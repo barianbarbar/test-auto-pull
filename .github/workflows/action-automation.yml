@@ -16,4 +16,7 @@ jobs:
           username: ${{ secrets.GOORM_USER }}
           key: ${{ secrets.GOORM_KEY }}
           port: ${{ secrets.GOORM_PORT }}
-          script: ls -al
+          script: |
+            ls -l
+            ls -al
+            cd /workspace
