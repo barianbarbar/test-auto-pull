@@ -8,9 +8,9 @@ jobs:
     name: Deployment auto
     runs-on: ubuntu-latest
     steps: 
-
-      - name: SSH Remote GOORM
         uses: appleboy/ssh-action@master
+        
+      - name: SSH Remote GOORM
         with:
           host: ${{ secrets.GOORM_HOST }}
           username: ${{ secrets.GOORM_USER }}
@@ -22,7 +22,6 @@ jobs:
             cd /workspace
 
       - name: SSH Remote PROXMOX
-        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.PROXMOX_HOST }}
           username: ${{ secrets.PROXMOX_USER }}
@@ -31,4 +30,3 @@ jobs:
           script: |
             ls -l
             ls -al
-            cd /workspace
