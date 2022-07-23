@@ -16,9 +16,12 @@ jobs:
           key: ${{ secrets.GOORM_KEY }}
           port: ${{ secrets.GOORM_PORT }}
           script: |
-            ls -l
-            ls -al
-            cd /workspace
+            cd /workspace/barianbarbar/test-auto-pull
+            git fetch
+            git reset --hard HEAD
+            git merge origin/main
+            npm install
+            pm2 restart app
 
       - name: SSH Remote PROXMOX
         uses: appleboy/ssh-action@master
@@ -28,5 +31,9 @@ jobs:
           key: ${{ secrets.PROXMOX_KEY }}
           port: ${{ secrets.PROXMOX_PORT }}
           script: |
-            ls -l
-            ls -al
+            cd /test-auto-pull
+            git fetch
+            git reset --hard HEAD
+            git merge origin/main
+            npm install
+            
