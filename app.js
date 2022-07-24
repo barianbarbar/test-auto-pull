@@ -10,7 +10,7 @@ app.use("/", taskRouter);
 
 mongoose.connect("mongodb://mongo:27017/taksList")
 .then(() => {
-    console.log("Berhasil Connect...")
+    console.log("Status Connected...")
 });
 
 app.listen(3000, () => {
