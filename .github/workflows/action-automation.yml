@@ -8,21 +8,6 @@ jobs:
     name: Deployment auto
     runs-on: ubuntu-latest
     steps: 
-      - name: SSH Remote GOORM
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.GOORM_HOST }}
-          username: ${{ secrets.GOORM_USER }}
-          key: ${{ secrets.GOORM_KEY }}
-          port: ${{ secrets.GOORM_PORT }}
-          script: |
-            cd /workspace/barianbarbar/test-auto-pull
-            git fetch
-            git reset --hard HEAD
-            git merge origin/main
-            npm install
-            pm2 restart app
-
       - name: SSH Remote PROXMOX
         uses: appleboy/ssh-action@master
         with:
