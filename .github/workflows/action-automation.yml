@@ -17,9 +17,9 @@ jobs:
           port: ${{ secrets.PROXMOX_PORT }}
           script: |
             cd /test-auto-pull
-            git pull
             git fetch
             git reset --hard HEAD
             git merge origin/main
+            git pull
             npm install
             
