@@ -2,12 +2,14 @@
 <a href="/add" class="btn btn-page btn-add-new">add new task</a>
 <div class="card">
     <div class="list-task">
-        <div class="wrapper-task-item">
-            <p>lorem ipsum lorem lremsdjksjd sjdksjkdjsk ldksldk </p>
-            <div class="wrapper-action">
-                <a href="#" class="btn btn-edit">edit</a>
-                <a href="#" class="btn btn-delete">delete</a>
+        <% tasks.forEach(task => { %>
+            <div class="wrapper-task-item">
+                <p><%= task.name %> </p>
+                <div class="wrapper-action">
+                    <a href="/edit/<%= task._id %>"   class="btn btn-edit">edit</a>
+                    <a href="/delete/<%= task._id %>" class="btn btn-delete" onclick="return confirm('Hapus <%= task.name %>?')">delete</a>
+                </div>
             </div>
-        </div>
+        <% }) %>
     </div>
 </div>

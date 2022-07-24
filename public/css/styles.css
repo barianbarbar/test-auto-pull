@@ -91,14 +91,14 @@ a.btn{
 }
 
 .btn-edit{
-    background-color: rgb(255, 255, 227);
-    color: rgb(255, 255, 0);
+    background-color: rgb(255, 239, 204);
+    color: rgb(255, 183, 0);
     margin-bottom: .5rem;
 }
 
 .btn-delete{
     background-color: rgb(255, 224, 224);
-  color: rgb(38, 255, 0);
+    color: rgb(255, 0, 0);
 }
 
 .btn-add-new {
@@ -125,6 +125,7 @@ a.btn{
     width: 100%;
     border: 1px solid rgb(202, 202, 202);
     border-radius: .5rem;
+    margin-bottom: 1.5rem;
 }
 
 .wrapper-task-item p{
