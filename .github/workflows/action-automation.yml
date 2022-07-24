@@ -16,7 +16,7 @@ jobs:
           key: ${{ secrets.PROXMOX_KEY }}
           port: ${{ secrets.PROXMOX_PORT }}
           script: |
-            cd /test-auto-pull
+            cd test-auto-pull
             git fetch
             git reset --hard HEAD
             git merge origin/main
