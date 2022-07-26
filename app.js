@@ -11,9 +11,9 @@ app.use(express.static("public"));
 app.use("/", taskRouter);
 
 const db_atlas = "mongodb+srv://user-radea:radeakui12@cluster0.hri4h.mongodb.net/taskList";
-const db_local = "'mongodb://mongo:27017/taskList'"
+const db_local = "mongodb://mongo:27017/taskList";
 
-mongoose.connect(db_atlas)
+mongoose.connect(db_local)
 .then(() => {
     console.log("Status Connected...")
 });
