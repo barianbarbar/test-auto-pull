@@ -20,5 +20,8 @@ jobs:
             git fetch
             git reset --hard HEAD
             git merge origin/main
+            npm install
+            pm2 restart
+
 
             
