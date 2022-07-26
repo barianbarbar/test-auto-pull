@@ -17,9 +17,6 @@ app.use("/", taskRouter);
 // .then(() => {
 //     console.log("Status Connected...")
 // });
-app.get("/", (req, res) => {
-    res.send("<h1>Hello Boss</h1>");
-})
 
 app.listen(4000, () => {
     console.log("Server running with port 3000");
