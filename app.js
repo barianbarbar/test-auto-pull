@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const taskRouter = require("./routes/task");
 
-// add komentar
+// add komentar aku ejs
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static("public"));
